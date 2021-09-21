@@ -1,0 +1,44 @@
+{
+  "name": "jsii-hidden-deps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "jsii",
+    "build:watch": "jsii --watch",
+    "package": "jsii-pacmak"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Harold Hunt",
+    "email": "harold@pwrdrvr.com"
+  },
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/pwrdrvr/jsii-hidden-deps.git",
+    "type": "git"
+  },
+  "stability": "experimental",
+  "types": "index.d.ts",
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "full",
+    "targets": {
+      "java": {
+        "package": "com.pwrdrvr.cdk.hidden-deps",
+        "maven": {
+          "groupId": "com.pwrdrvr",
+          "artifactId": "cdk-hidden-deps"
+        }
+      },
+      "python": {
+        "distName": "cdk-hidden-deps",
+        "module": "cdk-hidden-deps"
+      },
+      "dotnet": {
+        "namespace": "PwrDrvr.CDK",
+        "packageId": "PwrDrvr.CDK.HiddenDeps"
+      }
+    }
+  }
+}
