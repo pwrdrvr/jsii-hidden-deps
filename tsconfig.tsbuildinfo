@@ -101,6 +101,10 @@
         "version": "38fe68cee776564768f7aa280282d287a948d5821495d83f0730a7b2645154c3",
         "affectsGlobalScope": false
       },
+      "./dist/js/package/index.d.ts": {
+        "version": "5db5d3af7061f929d551598d7a6adc2ab943abb96372720250a156bb14800f85",
+        "affectsGlobalScope": false
+      },
       "./node_modules/typescript/lib/lib.es2018.d.ts": {
         "version": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
         "affectsGlobalScope": false
