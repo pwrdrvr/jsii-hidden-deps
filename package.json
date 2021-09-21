@@ -25,10 +25,10 @@
     "versionFormat": "full",
     "targets": {
       "java": {
-        "package": "com.pwrdrvr.cdk.hidden-deps",
+        "package": "com.pwrdrvr.cdk.hidden_deps",
         "maven": {
           "groupId": "com.pwrdrvr",
-          "artifactId": "cdk-hidden-deps"
+          "artifactId": "cdk_hidden_deps"
         }
       },
       "python": {
@@ -40,5 +40,14 @@
         "packageId": "PwrDrvr.CDK.HiddenDeps"
       }
     }
-  }
+  },
+  "devDependencies": {
+    "jsii": "^1.34.0",
+    "jsii-pacmak": "^1.34.0"
+  },
+  "dependencies": {
+    "@cloudcomponents/cdk-deletable-bucket": "^1.43.0"
+  },
+
+  "bundledDependencies": ["@cloudcomponents/cdk-deletable-bucket"]
 }

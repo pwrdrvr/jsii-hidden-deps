@@ -1,0 +1,138 @@
+{
+  "author": {
+    "email": "harold@pwrdrvr.com",
+    "name": "Harold Hunt",
+    "roles": [
+      "author"
+    ]
+  },
+  "bundled": {
+    "@cloudcomponents/cdk-deletable-bucket": "^1.43.0"
+  },
+  "description": "",
+  "docs": {
+    "stability": "experimental"
+  },
+  "homepage": "https://github.com/pwrdrvr/jsii-hidden-deps.git",
+  "jsiiVersion": "1.34.0 (build 9b72778)",
+  "keywords": [],
+  "license": "ISC",
+  "metadata": {
+    "jsii": {
+      "pacmak": {
+        "hasDefaultInterfaces": true
+      }
+    }
+  },
+  "name": "jsii-hidden-deps",
+  "readme": {
+    "markdown": "# Before Adding JS/Python-only Dependency\n\n- `npm run build`\n- `npm run package`\n- Result: `dotnet`, `java`, `js`, and `python` packages are created in `dist` without error\n\n# Add JS/Python-only Dependency\n\n- Note: this dependency is only to be consumed by the library being created and will not be exposed to consumers of the new library.\n- `npm i @cloudcomponents/cdk-deletable-bucket`\n- `npm run build`\n- `npm run package`\n- Result: `TypeError: Cannot read property 'namespace' of undefined at DotNetTypeResolver.resolveNamespacesDependencies (/jsii-hidden-deps/node_modules/jsii-pacmak/lib/targets/dotnet/dotnettyperesolver.js:71:46)`\n- [Line of failure](https://github.com/aws/jsii/blob/00c583586d832d77c372ea0d7ddb62b85a9ca336/packages/jsii-pacmak/lib/targets/dotnet/dotnettyperesolver.ts#L88)\n\n\n## Complete Error\n\n```\n> jsii-hidden-deps@1.0.0 package /Users/huntharo/pwrdrvr/jsii-hidden-deps\n> jsii-pacmak\n\n[jsii-pacmak] [WARN] Exception occurred, not cleaning up\n[jsii-pacmak] [WARN] dotnet failed\n[jsii-pacmak] [WARN] Exception occurred, not cleaning up\n[jsii-pacmak] [WARN] java failed\nTypeError: Cannot read property 'namespace' of undefined\n    at DotNetTypeResolver.resolveNamespacesDependencies (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/targets/dotnet/dotnettyperesolver.js:71:46)\n    at DotNetGenerator.generate (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/targets/dotnet/dotnetgenerator.js:43:27)\n    at Dotnet.generateCode (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/target.js:29:28)\n    at async DotnetBuilder.generateModuleCode (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/targets/dotnet.js:94:9)\n    at async /Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/targets/dotnet.js:62:30\n    at async Function.make (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/util.js:186:36)\n    at async DotnetBuilder.buildModules (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/targets/dotnet.js:35:35)\n    at async Promise.all (index 0)\n    at async Object.pacmak (/Users/huntharo/pwrdrvr/jsii-hidden-deps/node_modules/jsii-pacmak/lib/index.js:56:9)\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! jsii-hidden-deps@1.0.0 package: `jsii-pacmak`\nnpm ERR! Exit status 1\nnpm ERR!\nnpm ERR! Failed at the jsii-hidden-deps@1.0.0 package script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/huntharo/.npm/_logs/2021-09-21T00_55_23_423Z-debug.log\n```"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwrdrvr/jsii-hidden-deps.git"
+  },
+  "schema": "jsii/0.10.0",
+  "targets": {
+    "dotnet": {
+      "namespace": "PwrDrvr.CDK",
+      "packageId": "PwrDrvr.CDK.HiddenDeps"
+    },
+    "java": {
+      "maven": {
+        "artifactId": "cdk_hidden_deps",
+        "groupId": "com.pwrdrvr"
+      },
+      "package": "com.pwrdrvr.cdk.hidden_deps"
+    },
+    "js": {
+      "npm": "jsii-hidden-deps"
+    },
+    "python": {
+      "distName": "cdk-hidden-deps",
+      "module": "cdk-hidden-deps"
+    }
+  },
+  "types": {
+    "jsii-hidden-deps.Greeter": {
+      "assembly": "jsii-hidden-deps",
+      "docs": {
+        "stability": "experimental"
+      },
+      "fqn": "jsii-hidden-deps.Greeter",
+      "initializer": {
+        "docs": {
+          "stability": "experimental"
+        },
+        "locationInModule": {
+          "filename": "index.ts",
+          "line": 8
+        },
+        "parameters": [
+          {
+            "name": "props",
+            "type": {
+              "fqn": "jsii-hidden-deps.GreeterProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "index.ts",
+        "line": 5
+      },
+      "methods": [
+        {
+          "docs": {
+            "stability": "experimental"
+          },
+          "locationInModule": {
+            "filename": "index.ts",
+            "line": 12
+          },
+          "name": "greet",
+          "returns": {
+            "type": {
+              "primitive": "string"
+            }
+          }
+        }
+      ],
+      "name": "Greeter"
+    },
+    "jsii-hidden-deps.GreeterProps": {
+      "assembly": "jsii-hidden-deps",
+      "datatype": true,
+      "docs": {
+        "stability": "experimental"
+      },
+      "fqn": "jsii-hidden-deps.GreeterProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "index.ts",
+        "line": 1
+      },
+      "name": "GreeterProps",
+      "properties": [
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "experimental"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "index.ts",
+            "line": 2
+          },
+          "name": "greetee",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    }
+  },
+  "version": "1.0.0",
+  "fingerprint": "hLOfpsCRnHHqMzwzdovIPEcF3hpVygpC80C/wArBWDU="
+}
